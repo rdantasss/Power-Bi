@@ -1,0 +1,3 @@
+## Nome do mês  por extenso
+NOME MÊS =  Upper(FORMAT(TODAY(),"MMM"))
+
