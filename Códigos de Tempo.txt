@@ -3,3 +3,5 @@ NOME MÊS =  Upper(FORMAT(TODAY(),"MMM"))
 
 ##Data do mês anterior
 Mes Anterior = "01/" & FORMAT([Data Consumo]-1,"mm/yyyy")
+
+
