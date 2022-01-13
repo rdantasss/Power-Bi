@@ -1,0 +1,22 @@
+Calendário =
+ADDCOLUMNS (
+    CALENDAR ( DATE ( 2017, 01, 01 ), DATE ( 2030, 12, 31 ) ),
+    "DataIntegral", FORMAT ( [Date], "YYYYMMDD" ),
+    "Ano", YEAR ( [Date] ),
+    "MesNumero", FORMAT ( [Date], "MM" ),
+    "Ano.Mes", FORMAT ( [Date], "YYYY.MM" ),
+    "Ano.MesCurto", FORMAT ( [Date], "DD/mmm/YY" ),
+    "AnoCurto", FORMAT ( [Date], "YY" ),
+    "Mes.AnoTxt", FORMAT ( [Date], "mmm_YYYY" ),
+    "MesCurto", FORMAT ( [Date], "mmm" ),
+    "MesTxtCompleto", FORMAT ( [Date], "mmmm" ),
+    "Dia/Mes", FORMAT ( [Date], "dd/mm" ),
+    "SemanaNumero", WEEKDAY ( [Date] ),
+    "Semana", FORMAT ( [Date], "dddd" ),
+    "SemanaCurto", FORMAT ( [Date], "ddd" ),
+    "Trimestre", "Q" & FORMAT ( [Date], "Q" ),
+    "AnoTrimestre",
+        FORMAT ( [Date], "YYYY" ) & "/Q"
+            & FORMAT ( [Date], "Q" ),
+    "Hoje", NOW ()
+)
