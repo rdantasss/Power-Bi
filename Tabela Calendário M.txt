@@ -1,6 +1,6 @@
 let
-    DataInicial = #date(2020,1,1),
-    DataFinal = #date(2022,12,31),
+    DataInicial = Date.AddDays(DateTime.Date(DateTime.LocalNow()),-1000),
+    DataFinal = DateTime.Date(DateTime.LocalNow()),
     QtdDias = Duration.Days(DataFinal-DataInicial)+1,
     ListaDatas = List.Dates(DataInicial,QtdDias,#duration(1,0,0,0)),
     #"Convertido para Tabela" = Table.FromList(ListaDatas, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
